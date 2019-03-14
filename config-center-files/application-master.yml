@@ -1,0 +1,11 @@
+server:
+  host: master
+  port: 8761
+
+eureka:
+  client:
+    serviceUrl:
+      #defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${server.host}:${server.port}/eureka
+      defaultZone: http://${server.host}:${server.port}/eureka
+  instance:
+    hostname: master

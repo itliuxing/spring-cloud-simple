@@ -1,0 +1,12 @@
+server:
+  host: backup
+  port: 8762
+eureka:
+  client: 
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      #defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${server.host}:${server.port}/eureka
+      defaultZone: http://${server.host}:${server.port}/eureka
+  instance:
+    hostname: backup
